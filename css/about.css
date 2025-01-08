@@ -1,0 +1,40 @@
+
+.about-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin: 20px auto;
+  color: #555;
+}
+
+.about-section a {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Mission and Vision Section */
+.mission-vision-section {
+  background-color: #f4f4f4;
+  display: flex;
+
+
+}
+
+.mission-vision-section h3 {
+  font-size: 2em;
+  /* margin-bottom: 15px; */
+  color: #333;
+}
+
+.mission-vision-section p {
+
+  font-size: 1.1em;
+  color: #666;
+}
+.vision{
+  margin-top: 25px;
+}

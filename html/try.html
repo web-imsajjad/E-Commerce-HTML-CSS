@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Quantity Counter</title>
+  <style>
+    .counter-container {
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    input {
+      text-align: center;
+      width: 50px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="counterContainer">
+    <button id="decreaseBtn">-</button>
+    <input type="text" id="quantity" value="1" readonly>
+    <button id="increaseBtn">+</button>
+  </div>
+
+  <script>
+    const decreaseBtn = document.getElementById('decreaseBtn');
+    const increaseBtn = document.getElementById('increaseBtn');
+    const quantityInput = document.getElementById('quantity');
+
+    let currentQuantity = parseInt(quantityInput.value);
+
+    // Increase quantity
+    increaseBtn.addEventListener('click', () => {
+      currentQuantity++;
+      quantityInput.value = currentQuantity;
+    });
+
+    // Decrease quantity (but not below 1)
+    decreaseBtn.addEventListener('click', () => {
+      if (currentQuantity > 1) {
+        currentQuantity--;
+        quantityInput.value = currentQuantity;
+      }
+    });
+  </script>
+</body>
+
+</html>
